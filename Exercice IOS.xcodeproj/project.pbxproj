@@ -15,6 +15,12 @@
 		1C66258B1E19862500F47336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6625891E19862500F47336 /* LaunchScreen.storyboard */; };
 		1C6625961E19862500F47336 /* Exercice_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625951E19862500F47336 /* Exercice_IOSTests.swift */; };
 		1C6625A11E19862500F47336 /* Exercice_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625A01E19862500F47336 /* Exercice_IOSUITests.swift */; };
+		1C6625AF1E19AD5300F47336 /* HopitalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625AE1E19AD5300F47336 /* HopitalListViewController.swift */; };
+		1C6625B31E19B3D500F47336 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625B21E19B3D500F47336 /* HospitalTableViewCell.swift */; };
+		1C6625B51E19B97F00F47336 /* AddHospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625B41E19B97F00F47336 /* AddHospitalViewController.swift */; };
+		1C6625B71E19C43A00F47336 /* FileManager+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625B61E19C43A00F47336 /* FileManager+Document.swift */; };
+		1C6625B91E19C46300F47336 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625B81E19C46300F47336 /* DataManager.swift */; };
+		1C6625BF1E19C83200F47336 /* HospitalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6625BE1E19C83200F47336 /* HospitalManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		1C66259C1E19862500F47336 /* Exercice IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Exercice IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6625A01E19862500F47336 /* Exercice_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice_IOSUITests.swift; sourceTree = "<group>"; };
 		1C6625A21E19862500F47336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C6625AE1E19AD5300F47336 /* HopitalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HopitalListViewController.swift; sourceTree = "<group>"; };
+		1C6625B21E19B3D500F47336 /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		1C6625B41E19B97F00F47336 /* AddHospitalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHospitalViewController.swift; sourceTree = "<group>"; };
+		1C6625B61E19C43A00F47336 /* FileManager+Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Document.swift"; sourceTree = "<group>"; };
+		1C6625B81E19C46300F47336 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1C6625BE1E19C83200F47336 /* HospitalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,12 @@
 				1C6625891E19862500F47336 /* LaunchScreen.storyboard */,
 				1C66258C1E19862500F47336 /* Info.plist */,
 				1C6625841E19862400F47336 /* Exercice_IOS.xcdatamodeld */,
+				1C6625AE1E19AD5300F47336 /* HopitalListViewController.swift */,
+				1C6625B21E19B3D500F47336 /* HospitalTableViewCell.swift */,
+				1C6625B41E19B97F00F47336 /* AddHospitalViewController.swift */,
+				1C6625B61E19C43A00F47336 /* FileManager+Document.swift */,
+				1C6625B81E19C46300F47336 /* DataManager.swift */,
+				1C6625BE1E19C83200F47336 /* HospitalManager.swift */,
 			);
 			path = "Exercice IOS";
 			sourceTree = "<group>";
@@ -262,9 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6625BF1E19C83200F47336 /* HospitalManager.swift in Sources */,
 				1C6625801E19862400F47336 /* ViewController.swift in Sources */,
+				1C6625B51E19B97F00F47336 /* AddHospitalViewController.swift in Sources */,
+				1C6625B71E19C43A00F47336 /* FileManager+Document.swift in Sources */,
 				1C66257E1E19862400F47336 /* AppDelegate.swift in Sources */,
+				1C6625AF1E19AD5300F47336 /* HopitalListViewController.swift in Sources */,
 				1C6625861E19862400F47336 /* Exercice_IOS.xcdatamodeld in Sources */,
+				1C6625B91E19C46300F47336 /* DataManager.swift in Sources */,
+				1C6625B31E19B3D500F47336 /* HospitalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

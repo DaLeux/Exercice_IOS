@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Exercice IOS
-//
-//  Created by Keena on 01/01/2017.
-//  Copyright © 2017 DaLeux. All rights reserved.
-//
-
 import UIKit
 import CoreData
 

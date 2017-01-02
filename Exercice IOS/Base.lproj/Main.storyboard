@@ -1,26 +1,199 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cdE-0h-q7w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Hopital List View Controller-->
+        <scene sceneID="bTM-v1-EuX">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gVn-Rh-1on" customClass="HopitalListViewController" customModule="Exercice_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="2ze-7r-sib"/>
+                        <viewControllerLayoutGuide type="bottom" id="VaR-dW-Qfn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="ohi-V0-oVW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pu5-cQ-9ih">
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hospitalCell" rowHeight="80" id="JHZ-pp-cDs" customClass="HospitalTableViewCell" customModule="Exercice_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHZ-pp-cDs" id="ojp-tY-E3X">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Hôpital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExX-ze-vbY">
+                                                    <rect key="frame" x="13" y="18" width="96" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuX-Xc-WW3">
+                                                    <rect key="frame" x="13" y="48.5" width="62" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kuX-Xc-WW3" firstAttribute="top" secondItem="ExX-ze-vbY" secondAttribute="bottom" constant="10" id="0Rq-SJ-fq5"/>
+                                                <constraint firstItem="ExX-ze-vbY" firstAttribute="leading" secondItem="ojp-tY-E3X" secondAttribute="leadingMargin" constant="5" id="B8B-MV-DpV"/>
+                                                <constraint firstItem="kuX-Xc-WW3" firstAttribute="leading" secondItem="ojp-tY-E3X" secondAttribute="leadingMargin" constant="5" id="Lhp-Cr-udE"/>
+                                                <constraint firstItem="ExX-ze-vbY" firstAttribute="top" secondItem="ojp-tY-E3X" secondAttribute="topMargin" constant="10" id="pVY-QE-jkN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hospitalAddress" destination="kuX-Xc-WW3" id="XTK-ag-Nrx"/>
+                                            <outlet property="hospitalName" destination="ExX-ze-vbY" id="Lxa-1n-hts"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gVn-Rh-1on" id="PlD-AS-4aT"/>
+                                    <outlet property="delegate" destination="gVn-Rh-1on" id="48k-Z9-SHC"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes hôpitaux favoris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUz-uu-eJb">
+                                <rect key="frame" x="15" y="84" width="213.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pu5-cQ-9ih" firstAttribute="leading" secondItem="ohi-V0-oVW" secondAttribute="leading" id="0cv-4T-TaN"/>
+                            <constraint firstAttribute="trailing" secondItem="Pu5-cQ-9ih" secondAttribute="trailing" id="5pH-LZ-esB"/>
+                            <constraint firstItem="Pu5-cQ-9ih" firstAttribute="top" secondItem="aUz-uu-eJb" secondAttribute="bottom" constant="5" id="Q9S-tH-7Q2"/>
+                            <constraint firstItem="aUz-uu-eJb" firstAttribute="top" secondItem="2ze-7r-sib" secondAttribute="bottom" constant="20" id="Qhk-9k-yWL"/>
+                            <constraint firstItem="aUz-uu-eJb" firstAttribute="leading" secondItem="ohi-V0-oVW" secondAttribute="leading" constant="15" id="WZa-js-WUU"/>
+                            <constraint firstItem="VaR-dW-Qfn" firstAttribute="top" secondItem="Pu5-cQ-9ih" secondAttribute="bottom" id="ihB-iC-CW7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EVB-16-6FJ">
+                        <barButtonItem key="rightBarButtonItem" title="ADD" id="W3Z-Gx-O2p">
+                            <connections>
+                                <segue destination="SPS-Fj-QJr" kind="presentation" identifier="addHospital" id="EKA-nj-qex"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Pu5-cQ-9ih" id="OXN-iL-atq"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TwI-hs-Ei2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1700" y="122.78860569715144"/>
+        </scene>
+        <!--Add Hospital View Controller-->
+        <scene sceneID="WMc-3c-448">
+            <objects>
+                <viewController id="SPS-Fj-QJr" customClass="AddHospitalViewController" customModule="Exercice_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yCT-f8-7bo"/>
+                        <viewControllerLayoutGuide type="bottom" id="dQa-JD-3bA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fHn-re-eVI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2j-YB-5Wq">
+                                <rect key="frame" x="31" y="282" width="313" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SPS-Fj-QJr" id="dpW-CZ-UcD"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAl-sl-2la">
+                                <rect key="frame" x="31" y="597" width="313" height="30"/>
+                                <color key="backgroundColor" red="0.31083301503192834" green="0.13456948907495597" blue="0.73848576570680624" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Ajouter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveHospital:" destination="SPS-Fj-QJr" eventType="touchUpInside" id="4Rj-SI-ATS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse de l'hôpital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVj-mr-jge">
+                                <rect key="frame" x="113" y="239" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQK-H4-a5V">
+                                <rect key="frame" x="31" y="179" width="313" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SPS-Fj-QJr" id="eJQ-aH-W7t"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Hôpital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynA-mC-gfc">
+                                <rect key="frame" x="140" y="150" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OAl-sl-2la" secondAttribute="trailing" constant="15" id="DFt-EE-snv"/>
+                            <constraint firstItem="dQK-H4-a5V" firstAttribute="leading" secondItem="fHn-re-eVI" secondAttribute="leadingMargin" constant="15" id="DyX-gi-EMh"/>
+                            <constraint firstItem="PVj-mr-jge" firstAttribute="top" secondItem="dQK-H4-a5V" secondAttribute="bottom" constant="30" id="Ed4-7Q-m0W"/>
+                            <constraint firstItem="OAl-sl-2la" firstAttribute="leading" secondItem="fHn-re-eVI" secondAttribute="leadingMargin" constant="15" id="Szf-dg-73S"/>
+                            <constraint firstItem="ynA-mC-gfc" firstAttribute="centerX" secondItem="fHn-re-eVI" secondAttribute="centerX" id="Vl2-4G-SIC"/>
+                            <constraint firstItem="dQK-H4-a5V" firstAttribute="centerX" secondItem="fHn-re-eVI" secondAttribute="centerX" id="W5Q-6g-hQ9"/>
+                            <constraint firstItem="L2j-YB-5Wq" firstAttribute="top" secondItem="PVj-mr-jge" secondAttribute="bottom" constant="22" id="X0b-MT-7ZT"/>
+                            <constraint firstItem="dQK-H4-a5V" firstAttribute="top" secondItem="ynA-mC-gfc" secondAttribute="bottom" constant="8" id="YXK-x1-VHf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L2j-YB-5Wq" secondAttribute="trailing" constant="15" id="Z4O-H3-Ho3"/>
+                            <constraint firstItem="dQa-JD-3bA" firstAttribute="top" secondItem="OAl-sl-2la" secondAttribute="bottom" constant="40" id="bsb-ET-npQ"/>
+                            <constraint firstItem="L2j-YB-5Wq" firstAttribute="top" secondItem="fHn-re-eVI" secondAttribute="top" constant="282" id="cfF-Q6-WsY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dQK-H4-a5V" secondAttribute="trailing" constant="15" id="l69-8H-cCB"/>
+                            <constraint firstItem="L2j-YB-5Wq" firstAttribute="centerX" secondItem="PVj-mr-jge" secondAttribute="centerX" id="mV0-rx-j6S"/>
+                            <constraint firstItem="L2j-YB-5Wq" firstAttribute="leading" secondItem="fHn-re-eVI" secondAttribute="leadingMargin" constant="15" id="qPq-2J-CRc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="L2j-YB-5Wq" id="pj6-xk-pi5"/>
+                        <outlet property="nameTextField" destination="dQK-H4-a5V" id="6sa-7R-bQg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTs-3a-OIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2561" y="-71"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nAA-Qa-O3i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cdE-0h-q7w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rVB-HG-rYp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gVn-Rh-1on" kind="relationship" relationship="rootViewController" id="YRz-il-hsZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wH-1e-gcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
